@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Constitution Awareness Platform (FEDF-PS19)</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=Lora:wght@600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div id="login-view" class="view active-view">
+        <div class="login-container card-shadow animated-entry">
+            <header>
+                <h1>🇮🇳 Constitution Awareness Platform</h1>
+                <p class="subtitle">Promote Awareness of the Indian Constitution</p>
+            </header>
+            <form id="loginForm">
+                <div class="input-group">
+                    <label for="username">Your Name</label>
+                    <input type="text" id="username" required placeholder="Full Name">
+                </div>
+                <div class="input-group">
+                    <label for="role">Select Your Role</label>
+                    <select id="role" required>
+                        <option value="" disabled selected>--- Choose your Role ---</option>
+                        <option value="Admin">Admin</option>
+                        <option value="Educator">Educator</option>
+                        <option value="Citizen">Citizen</option>
+                        <option value="LegalExpert">Legal Expert</option>
+                    </select>
+                </div>
+                <button type="submit" class="cta-button pulse-effect">
+                    Access Dashboard <span class="arrow">→</span>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <div id="dashboard-view" class="view">
+        <header class="main-header">
+            <nav class="header-nav">
+                <div class="logo">
+                    <span id="user-role-icon"></span>
+                    <span id="user-role-display">Citizen</span> Dashboard
+                </div>
+                <button id="logout-btn" class="logout-btn">
+                    <span class="icon">🚪</span> Logout
+                </button>
+            </nav>
+        </header>
+
+        <main class="main-content">
+            <div class="sidebar card-shadow">
+                <div class="user-profile">
+                    <div class="user-avatar">👤</div>
+                    <p class="greeting">Hello, <strong id="username-display">User</strong>!</p>
+                </div>
+                
+                <nav class="role-nav">
+                    <a href="#" data-section="home" class="nav-link active">🏠 Home</a>
+                    <a href="#" data-section="resources" class="nav-link">📝 Resources</a>
+                    <a href="#" data-section="discussions" class="nav-link">💬 Discussions</a>
+                    <a href="#" data-section="admin" class="nav-link role-admin" style="display:none;">⚙️ User Management</a>
+                    <a href="#" data-section="expert" class="nav-link role-expert" style="display:none;">⚖️ Legal Amendments</a>
+                    <a href="#" data-section="educator" class="nav-link role-educator" style="display:none;">✍️ Content Creator</a>
+                </nav>
+            </div>
+
+            <div class="content-area">
+                <section id="content-display" class="content-display">
+                    </section>
+            </div>
+        </main>
+
+        <footer>
+            &copy; 2025 FEDF-PS19 Project. Dedicated to Constitutional Awareness.
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
